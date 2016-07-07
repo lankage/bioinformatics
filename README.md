@@ -52,3 +52,27 @@ GACTAGCATAGCATCTACTGCATCTA
                    GCATCTAATCGACTGATGCTAGT
 ```                   
   
+
+
+
+
+### Pivotron Geneious plugin
+Pivotron is a Geneious plugin that operates on contig assembly files within Geneious. Pivotron creates a text file within geneious as output that lists counts of reads broken out by contig name (allele name) and by barcode identifier.  Pivotron looks for barcode identifiers appended to the sequencing read header.  Raw reads used in a mapping need to have been name appended prior to being assembled into contigs.
+
+To Install:
+
+Drag and drop the .gplugin file onto a running Geneious window.
+
+To use:
+
+Select 1 or more contig files (the three red lines) that are the result of mapping to reference.  Click "Activate Pivotron" on the menu bar at the top.  A Text File will be generated that contains the pivoted information.  As geneious doesn't have an export function for a text file yet, we have to do a simple workaround to get the data out of Geneious.  Open a new text file in any text editor.  Select the Text File output from Pivotron within Geneious.  Highlight all the text in the Text View window and copy it.  Paste this text into your empty text document.   This file can now be imported using excels text import feature.
+
+Pivotron expects reads to be **name appended** like the following formats:
+
+m151105_060456_42238_c100909452550000001823206504301616_s1_p0/144308/ccs/**0012_Forward--0013_Reverse.zerolen.fastq** -> "0012_Forward--0013_Reverse" appears as column in table
+
+m151105_060456_42238_c100909452550000001823206504301616_s1_p0/144308/ccs/**KT0918** -> "KT0918" appears as column in table
+
+m151115_083855_42134_c100936172550000001823205704291617_s1_p0/85/ccs/**0001_F--0001_R.zerolen.fastq** -> "0001_F--0001_R" appears as column in table
+
+Preparing the sequencing reads with names appended can be accomplished in Geneious using the Batch Rename function, or externally via script.
