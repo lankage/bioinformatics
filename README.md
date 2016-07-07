@@ -27,6 +27,8 @@ optional arguments:
   -w word size              Specify a min word size
   -m minimum total matches  Specify a minimum total matches
 ```
+Dependencies:
+Requires python3 installed. Requires nuc.py and ReadFasta.py in working directory.
 
 OligoCompat.py outputs alignments between sequences showing base matching between sequences which represents
 complementarity.  In each alignment one of the sequences is reverse-complemented.
