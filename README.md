@@ -83,7 +83,7 @@ zerolenRemove.py is a script that removes zero-length fastq reads from .fastq fi
 by some Pacific Biosciences analysis tools, presumably due to quality trimming or similar.  Some software tools can't parse fastq files with 
 zero length reads present so this provides a means to remove them.
 
-Usage: ```python3 zerolenRemove.py```,  operates within a working directory containing *.fastq files and creates a `*.zerolen.fastq` version of any fastq files present.
+Usage: ```python3 zerolenRemove.py```,  operates within a working directory containing `*.fastq` files and creates a `*.zerolen.fastq` version of any fastq files present.
 
 ### append_barcodename.py
 append_barcodename.py adds the fastq file name to the end of each read header within a fastq file.  The purpose of this is to maintain sample origin identification
