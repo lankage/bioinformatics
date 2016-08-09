@@ -119,3 +119,27 @@ optional arguments:
   -fq FQ      Specify an input fastq file
   -fa FA      Specify an output file
 ```
+### Barcoder.py
+Barcoder.py takes a barcode definitions files as input and outputs a barcode fasta file for use with
+demultiplexing PacBio read data.  Several of PacBio's software tools require this barcode file.  The barcode definitions file is 
+a text file containing pairs of forward and reverse barcode numbers that reference the barcode number in the standard PacBio 384 barcode
+set.  The file should look like:
+
+1,2
+3,4
+5,6
+7,8
+...
+
+The barcode_ref input is a fasta formatted file containing the 384 forward orientation standard PacBio barcode sequences.
+
+```
+usage: Barcoder.py [-h] -barcode_defs BARCODE_DEFS -barcode_ref BARCODE_REF
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -barcode_defs BARCODE_DEFS
+                        Specify a barcode definitions file
+  -barcode_ref BARCODE_REF
+                        Specify a barcode reference file
+```
